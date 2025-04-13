@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* height: 100vh; */
+  background: linear-gradient(#5c006b, #000000);
+  /* background: radial-gradient(#2e004f, #5c006b, #140032); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+.header {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 30px 50px rgb(250, 28, 250);
+}
+.header .nav {
+  min-width: 500px;
+  /* background-color: red; */
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav a {
+  color: rgb(214, 214, 214);
+  font-size: 24px;
+  text-decoration: none;
+}
+.header .nav a:hover {
+  color: white;
+}
+main{
+    margin-top: 100px;
+
+}
+.section {
+  width: 100vw;
+  min-height: 600px;
+  /* background-color: aqua; */
+}
+.section .containerData {
+  width: 100%;
+  /* min-height: 300px; */
+  padding: 10px;
+  padding-left: 20px;
+  display: flex;
+  /* border: 1px solid white; */
+}
+.section .containerData .data {
+  width: 50%;
+}
+.section .containerData .me p {
+  font-size: 60px;
+}
+.name{
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(30, end) forwards;
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+.rol{
+opacity: 0;
+animation: traslate 1s linear forwards;
+animation-delay: 1s;
+}
+@keyframes traslate {
+    from{
+        transform: translateY(200px);
+        filter: blur(10px);
+        color: blue;
+        text-shadow: 0 20px 50px #5c006b;
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.section .containerData .passion {
+  font-size: 27px;
+  height: 100%;
+  animation: traslatePassion 1s linear forwards;
+}
+
+@keyframes traslatePassion {
+    from{
+        transform: translateX(200px);
+        filter: blur(10px);
+        color: blue;
+        text-shadow: 0 20px 50px #5c006b;
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.section .containerData .passion .text {
+  margin-bottom: 20px;
+}
+.section .skills {
+  width: 100%;
+  min-height: 100px;
+  height: 200px;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+    align-items: center */
+}
+.section .skills .titleSkills {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid white; */
+}
+.section .skills .titleSkills p {
+  font-size: 25px;
+}
+.carrousel {
+  width: 100%;
+  height: 60px;
+  /* border: 1px solid white; */
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 2s;
+  overflow: hidden;
+
+}
+@keyframes scrolll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50%);
+      opacity: 0.5;
+    }
+  }
+.item{
+    transition: 2s;
+
+}
+.carrousel .carrouselInside {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+  /* animation: scrolll 10s linear infinite; */
+}
+.carrousel img {
+  width: 50px;
+  height: 50px;
+}
+.sectionProject {
+  width: 100%;
+  min-height: 300px;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sectionProject .titleProject{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sectionProject .titleProject p{
+    font-size: 30px;
+}
+.sectionProject .ShowProject{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.sectionProject .ShowProject .cardProject{
+    width: 400px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 15px;
+    padding: 20px;
+}
+
+
+footer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 768) 
+{
+.containerData{
+    flex-direction: column;
+}    
+}
