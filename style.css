@@ -9,7 +9,9 @@ body {
   margin: 0;
   padding: 0;
   /* height: 100vh; */
-  background: linear-gradient(#5c006b, #000000);
+  background: linear-gradient(#0e667f, #000000);
+
+  /* background: linear-gradient(#5c006b, #000000); */
   /* background: radial-gradient(#2e004f, #5c006b, #140032); */
   display: flex;
   flex-direction: column;
@@ -17,6 +19,7 @@ body {
   align-items: center;
   color: white;
   position: relative;
+  overflow-x: hidden;
 }
 .light-overlay {
     position: fixed;
@@ -31,17 +34,22 @@ body {
   }
 .header {
   width: 100%;
-  height: 60px;
-  position: absolute;
+  height: 50px;
+  position: fixed;
+  z-index: 1;
   top: 0;
+  left: 0 ;
   /* background-color: aqua; */
+  /* background: linear-gradient(#51095c, #de05ff); */
+  background: linear-gradient(#000000, #0a9dc6);
+
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 30px 50px rgb(250, 28, 250);
+  box-shadow: 0 30px 50px rgb(4, 234, 255);
 }
 .header .nav {
-  min-width: 500px;
+  min-width: 400px;
   /* background-color: red; */
   height: 100%;
   display: flex;
@@ -50,7 +58,7 @@ body {
 }
 .header .nav a {
   color: rgb(214, 214, 214);
-  font-size: 24px;
+  font-size: 18px;
   text-decoration: none;
 }
 .header .nav a:hover {
@@ -77,7 +85,7 @@ main{
   width: 50%;
 }
 .section .containerData .me p {
-  font-size: 60px;
+  font-size: 40px;
 }
 .name{
     width: 0;
@@ -114,7 +122,7 @@ animation-delay: 1s;
 }
 
 .section .containerData .passion {
-  font-size: 27px;
+  font-size: 17px;
   height: 100%;
   animation: traslatePassion 1s linear forwards;
 }
@@ -203,6 +211,41 @@ animation-delay: 1s;
     justify-content: space-between;
     align-items: center;
 }
+.sameStack:nth-child(1) {
+  opacity: 0;
+  animation: traslationSkills 0.5s linear forwards;
+  animation-delay: 0.5;
+  /* position: relative; */
+}
+.sameStack:nth-child(2) {
+  opacity: 0;
+  animation: traslationSkills 0.5s linear forwards;
+  animation-delay: 0.5s;
+  /* position: relative; */
+}
+.sameStack:nth-child(3) {
+  opacity: 0;
+  animation: traslationSkills 0.5s linear forwards;
+  animation-delay: 1s;
+  /* position: relative; */
+}
+.sameStack:nth-child(4) {
+  opacity: 0;
+  animation: traslationSkills 0.5s linear forwards;
+  animation-delay: 1.5s;
+  /* position: relative; */
+}
+@keyframes traslationSkills {
+  from{
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .section .splitSkills .sameStack{
     width: 200px;
     height: 200px;
@@ -211,12 +254,24 @@ animation-delay: 1s;
     -webkit-backdrop-filter: blur(10px); 
     border: 1px solid rgba(255, 255, 255, 0.2); 
     border-radius: 15px;
-    padding: 20px;
+ 
+}
+.section .splitSkills .sameStack .stackSkills{
+  width: 100%;
+  height: 30px;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section .splitSkills .sameStack .tecnology{
+    padding: 20px; 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); 
 }
 .section .splitSkills .sameStack img{
-    width: 40px;
+    width: 30px;
+    margin: 5px;
 }
 .sectionProject {
   width: 100%;
@@ -226,6 +281,20 @@ animation-delay: 1s;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.animationProjectCard{
+animation: animationProjectCard1 0.5s linear forwards;
+}
+@keyframes animationProjectCard1 {
+  from{
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .sectionProject .titleProject{
     width: 100%;
@@ -243,17 +312,85 @@ animation-delay: 1s;
     grid-template-columns: repeat(3, 1fr);
 }
 .sectionProject .ShowProject .cardProject{
-    width: 400px;
-    height: 500px;
+    width: 300px;
+    height: 400px;
     background: rgba(255, 255, 255, 0.1); 
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px); 
     border: 1px solid rgba(255, 255, 255, 0.2); 
     border-radius: 15px;
     padding: 20px;
+    margin: 10px;
+    opacity: 0;
 }
+.sectionProject .ShowProject .cardProject:hover{
+  width: 500px;
+  height: 500px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+  /* transition: 0.5s; */
+}
+.sectionProject .ShowProject .cardProject .nameProject{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aqua; */
+}
+.sectionProject .ShowProject .cardProject .data{
+  width: 100%;
+  height: 90%;
+  position: relative;
 
-
+  /* background-color: aqua; */
+}
+.sectionProject .ShowProject .cardProject .data .image{
+  width: 100%;
+  height: 50%;
+  /* height: 160px; */
+  /* background-color: red; */
+  border-radius: 10px;
+}
+.sectionProject .ShowProject .cardProject .data .image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: contain;
+}
+/* .sectionProject .ShowProject .cardProject .data .image img:hover{
+  width: 345px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.5s;
+} */
+.sectionProject .ShowProject .cardProject .data .descriptionProject{
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  text-align: center;
+  /* background-color: aqua; */
+}
+.sectionProject .ShowProject .cardProject .data .tecnologyUsed{
+  width: 100%;
+  height: 60px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 5px;
+  margin-top: 5px;
+}
+.sectionProject .ShowProject .cardProject .data .tecnologyUsed button{
+  min-width: 70px;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(12, 215, 9);
+}
 footer{
     width: 100%;
     height: 100px;
@@ -269,7 +406,7 @@ footer{
 }
 .footer a{
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
 }
