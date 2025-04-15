@@ -1,9 +1,72 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+@keyframes typing {
+  from{
+      width: 0;
+  }
+  to{
+      width: 100%;
+  }
+}
+@keyframes traslate {
+  from{
+      transform: translateY(200px);
+      filter: blur(10px);
+      color: blue;
+      text-shadow: 0 20px 50px #5c006b;
+      opacity: 0;
+  }
+  to{
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+@keyframes traslatePassion {
+  from{
+      transform: translateX(200px);
+      filter: blur(10px);
+      color: blue;
+      text-shadow: 0 20px 50px #5c006b;
+      opacity: 0;
+  }
+  to{
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+@keyframes scrolll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+    opacity: 0.5;
+  }
+}
+@keyframes traslationSkills {
+  from{
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes animationProjectCard1 {
+  from{
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 body {
     width: 100vw;
   margin: 0;
@@ -77,15 +140,15 @@ main{
   width: 100%;
   /* min-height: 300px; */
   padding: 10px;
-  padding-left: 20px;
+  /* padding-left: 20px; */
   display: flex;
   /* border: 1px solid white; */
 }
 .section .containerData .data {
-  width: 50%;
+  width: 100%;
 }
 .section .containerData .me p {
-  font-size: 40px;
+  font-size: 27px;
 }
 .name{
     width: 0;
@@ -94,32 +157,13 @@ main{
     animation: typing 2s steps(27, end) forwards;
 }
 
-@keyframes typing {
-    from{
-        width: 0;
-    }
-    to{
-        width: 100%;
-    }
-}
+
 .rol{
 opacity: 0;
 animation: traslate 1s linear forwards;
 animation-delay: 1s;
 }
-@keyframes traslate {
-    from{
-        transform: translateY(200px);
-        filter: blur(10px);
-        color: blue;
-        text-shadow: 0 20px 50px #5c006b;
-        opacity: 0;
-    }
-    to{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+
 
 .section .containerData .passion {
   font-size: 17px;
@@ -127,26 +171,13 @@ animation-delay: 1s;
   animation: traslatePassion 1s linear forwards;
 }
 
-@keyframes traslatePassion {
-    from{
-        transform: translateX(200px);
-        filter: blur(10px);
-        color: blue;
-        text-shadow: 0 20px 50px #5c006b;
-        opacity: 0;
-    }
-    to{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
 .section .containerData .passion .text {
   margin-bottom: 20px;
 }
 .section .skills {
   width: 100%;
-  min-height: 100px;
+  /* min-height: 100px; */
   min-height: 200px;
   /* border: 1px solid white; */
   display: flex;
@@ -177,15 +208,7 @@ animation-delay: 1s;
   overflow: hidden;
 
 }
-@keyframes scrolll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(50%);
-      opacity: 0.5;
-    }
-  }
+
 .item{
     transition: 2s;
 
@@ -235,16 +258,7 @@ animation-delay: 1s;
   animation-delay: 1.5s;
   /* position: relative; */
 }
-@keyframes traslationSkills {
-  from{
-    opacity: 0;
-    transform: translateY(200px);
-  }
-  to{
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+
 
 .section .splitSkills .sameStack{
     width: 200px;
@@ -286,16 +300,7 @@ animation-delay: 1s;
 .animationProjectCard{
 animation: animationProjectCard1 0.5s linear forwards;
 }
-@keyframes animationProjectCard1 {
-  from{
-    opacity: 0;
-    transform: translateY(200px);
-  }
-  to{
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+
 .sectionProject .titleProject{
     width: 100%;
     height: 80px;
@@ -410,9 +415,162 @@ footer{
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
 }
-@media (max-width: 768) 
+@media (max-width: 768px) 
 {
-.containerData{
+  .header {
+    height: auto;
+    width: 100vw;
+    padding: 10px 0;
+  }
+
+  .header .nav {
+    width: 100%;
+    flex-direction: flex  ; 
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header .nav a {
+    font-size: 20px;
+    color: rgb(214, 214, 214);
+    text-decoration: none;
+  }
+
+  .header .nav a:hover {
+    color: white;
+  }
+.section {
+  width: 100%;
+  min-height: 600px;
+  /* background-color: aqua; */
+}
+.section .containerData {
+  width: 100%;
+  /* min-height: 300px; */
+  padding: 10px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1px solid white; */
+}
+
+.section .skills {
+  width: 100%;
+  /* min-height: 100px; */
+  min-height: 200px;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+    align-items: center */
+}
+.section .skills .titleSkills {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid white; */
+}
+.section .skills .titleSkills p {
+  font-size: 25px;
+}
+.carrousel {
+  width: 100%;
+  height: 60px;
+  /* border: 1px solid white; */
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 2s;
+  overflow: hidden;
+
+}
+
+.item{
+    transition: 2s;
+
+}
+.carrousel .carrouselInside {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+  /* animation: scrolll 10s linear infinite; */
+}
+.carrousel img {
+  width: 30px;
+  height: 30px;
+}
+
+.section .splitSkills{
+    width: 100%;
+    display: flex;
     flex-direction: column;
-}    
+    padding: 40px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.section .splitSkills .sameStack{
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 15px;
+ 
+}
+.section .splitSkills .sameStack .stackSkills{
+  width: 100%;
+  height: 30px;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section .splitSkills .sameStack .tecnology{
+    padding: 20px; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+}
+.section .splitSkills .sameStack img{
+    width: 30px;
+    margin: 5px;
+}
+
+.sectionProject .titleProject{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectionProject .titleProject p{
+  font-size: 30px;
+}
+.sectionProject .ShowProject{
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+}
+.sectionProject .ShowProject .cardProject{
+  width: 300px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px;
+  opacity: 0;
+}
 }
