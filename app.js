@@ -32,5 +32,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   })
 }, {
-  threshold: 0.25  // Reducido para dispositivos móviles
+  threshold: 0.1  // Cambié el umbral a 10%
 })
+
+observer.observe(sectionProject)
