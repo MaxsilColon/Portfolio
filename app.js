@@ -21,6 +21,19 @@ document.addEventListener('mousemove', (e) => {
 const sectionProject = document.querySelector(".sectionProject")
 
 const cardProject = document.querySelectorAll(".cardProject")
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       cardProject.forEach((entry, index) => {
+//         entry.style.animationDelay = `${index * 0.5}s`
+//         entry.classList.add("animationProjectCard")
+//       })
+//       observer.unobserve(entry.target)
+//     }
+//   })
+// }, {
+//   threshold: 0.1  // Cambié el umbral a 10%
+// })
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -32,7 +45,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   })
 }, {
-  threshold: 0.1  // Cambié el umbral a 10%
+  threshold: 0 
 })
 
 observer.observe(sectionProject)
