@@ -18,7 +18,7 @@ document.addEventListener('mousemove', (e) => {
   light.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(31, 132, 249, 0.15) 0%, transparent 40%)`;
 });
 
-const sectionProject = document.querySelector(".sectionProject")
+const sectionProject = document.getElementById("sectionProject")
 
 const cardProject = document.querySelectorAll(".cardProject")
 // const observer = new IntersectionObserver((entries) => {

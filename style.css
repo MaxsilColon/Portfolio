@@ -136,7 +136,7 @@ main{
   min-height: 600px;
   /* background-color: aqua; */
 }
-.section .containerData {
+.section #containerData {
   width: 100%;
   /* min-height: 300px; */
   padding: 10px;
@@ -144,10 +144,10 @@ main{
   display: flex;
   /* border: 1px solid white; */
 }
-.section .containerData .data {
+.section #containerData .data {
   width: 100%;
 }
-.section .containerData .me p {
+.section #containerData .me p {
   font-size: 27px;
 }
 .name{
@@ -165,17 +165,17 @@ animation-delay: 1s;
 }
 
 
-.section .containerData .passion {
+.section #containerData .passion {
   font-size: 17px;
   height: 100%;
   animation: traslatePassion 1s linear forwards;
 }
 
 
-.section .containerData .passion .text {
+.section #containerData .passion .text {
   margin-bottom: 20px;
 }
-.section .skills {
+.section #skills {
   width: 100%;
   /* min-height: 100px; */
   min-height: 200px;
@@ -185,7 +185,7 @@ animation-delay: 1s;
   /* justify-content: center;
     align-items: center */
 }
-.section .skills .titleSkills {
+.section #skills .titleSkills {
   width: 100%;
   height: 50px;
   display: flex;
@@ -193,7 +193,7 @@ animation-delay: 1s;
   align-items: center;
   /* border: 1px solid white; */
 }
-.section .skills .titleSkills p {
+.section #skills .titleSkills p {
   font-size: 25px;
 }
 .carrousel {
@@ -287,7 +287,7 @@ animation-delay: 1s;
     width: 30px;
     margin: 5px;
 }
-.sectionProject {
+#sectionProject {
   width: 100%;
   min-height: 300px;
   /* border: 1px solid white; */
@@ -301,22 +301,22 @@ animation-delay: 1s;
 animation: animationProjectCard1 0.5s linear forwards;
 }
 
-.sectionProject .titleProject{
+#sectionProject .titleProject{
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.sectionProject .titleProject p{
+#sectionProject .titleProject p{
     font-size: 30px;
 }
-.sectionProject .ShowProject{
+#sectionProject .ShowProject{
     width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-.sectionProject .ShowProject .cardProject{
+#sectionProject .ShowProject .cardProject{
     width: 300px;
     height: 400px;
     background: rgba(255, 255, 255, 0.1); 
@@ -328,7 +328,7 @@ animation: animationProjectCard1 0.5s linear forwards;
     margin: 10px;
     opacity: 0;
 }
-.sectionProject .ShowProject .cardProject:hover{
+#sectionProject .ShowProject .cardProject:hover{
   width: 500px;
   height: 500px;
   top: 0;
@@ -337,7 +337,7 @@ animation: animationProjectCard1 0.5s linear forwards;
   z-index: 1;
   /* transition: 0.5s; */
 }
-.sectionProject .ShowProject .cardProject .nameProject{
+#sectionProject .ShowProject .cardProject .nameProject{
   width: 100%;
   height: 30px;
   display: flex;
@@ -345,27 +345,27 @@ animation: animationProjectCard1 0.5s linear forwards;
   align-items: center;
   /* background-color: aqua; */
 }
-.sectionProject .ShowProject .cardProject .data{
+#sectionProject .ShowProject .cardProject .data{
   width: 100%;
   height: 90%;
   position: relative;
 
   /* background-color: aqua; */
 }
-.sectionProject .ShowProject .cardProject .data .image{
+#sectionProject .ShowProject .cardProject .data .image{
   width: 100%;
   height: 50%;
   /* height: 160px; */
   /* background-color: red; */
   border-radius: 10px;
 }
-.sectionProject .ShowProject .cardProject .data .image img{
+#sectionProject .ShowProject .cardProject .data .image img{
   width: 100%;
   height: 100%;
   border-radius: 10px;
   object-fit: contain;
 }
-/* .sectionProject .ShowProject .cardProject .data .image img:hover{
+/* #sectionProject .ShowProject .cardProject .data .image img:hover{
   width: 345px;
   position: absolute;
   top: 0;
@@ -373,14 +373,14 @@ animation: animationProjectCard1 0.5s linear forwards;
   z-index: 1;
   transition: 0.5s;
 } */
-.sectionProject .ShowProject .cardProject .data .descriptionProject{
+#sectionProject .ShowProject .cardProject .data .descriptionProject{
   width: 100%;
   height: 100px;
   padding: 10px;
   text-align: center;
   /* background-color: aqua; */
 }
-.sectionProject .ShowProject .cardProject .data .tecnologyUsed{
+#sectionProject .ShowProject .cardProject .data .tecnologyUsed{
   width: 100%;
   height: 60px;
   display: grid;
@@ -388,7 +388,7 @@ animation: animationProjectCard1 0.5s linear forwards;
   gap: 5px;
   margin-top: 5px;
 }
-.sectionProject .ShowProject .cardProject .data .tecnologyUsed button{
+#sectionProject .ShowProject .cardProject .data .tecnologyUsed button{
   min-width: 70px;
   height: 20px;
   border: none;
@@ -415,7 +415,7 @@ footer{
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
 }
-.educationclas{
+#educationclas{
   min-height: 200px;
   /* border: 1px solid white; */
   display: flex;
@@ -423,24 +423,24 @@ footer{
   align-items: center;
   flex-direction: column;
 }
-.educationclas .topTitle{
+#educationclas .topTitle{
   width: 100%;
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.educationclas .topTitle p{
+#educationclas .topTitle p{
   font-size: 25px;
 }
-.educationclas .information{
+#educationclas .information{
   height: 250px;
   /* border: 1px solid rgb(156, 71, 71); */
   width: 400px;
   margin: 10px;
   padding: 10px;
 }
-.educationclas .information .dataInformationstudies{
+#educationclas .information .dataInformationstudies{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -450,7 +450,7 @@ footer{
     height: 70px;
     margin-bottom: 15px;
 }
-.educationclas .information .dataInformationstudies .dataInfoc{
+#educationclas .information .dataInformationstudies .dataInfoc{
   margin-left: 10px;
 }
 @media (max-width: 768px) 
@@ -483,7 +483,7 @@ footer{
   min-height: 600px;
   /* background-color: aqua; */
 }
-.section .containerData {
+.section #containerData {
   width: 100%;
   /* min-height: 300px; */
   padding: 10px;
@@ -494,7 +494,7 @@ footer{
   /* border: 1px solid white; */
 }
 
-.section .skills {
+.section #skills {
   width: 100%;
   /* min-height: 100px; */
   min-height: 200px;
@@ -504,7 +504,7 @@ footer{
   /* justify-content: center;
     align-items: center */
 }
-.section .skills .titleSkills {
+.section #skills .titleSkills {
   width: 100%;
   height: 50px;
   display: flex;
@@ -512,7 +512,7 @@ footer{
   align-items: center;
   /* border: 1px solid white; */
 }
-.section .skills .titleSkills p {
+.section #skills .titleSkills p {
   font-size: 25px;
 }
 .carrousel {
@@ -584,23 +584,23 @@ footer{
     margin: 5px;
 }
 
-.sectionProject .titleProject{
+#sectionProject .titleProject{
   width: 100%;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.sectionProject .titleProject p{
+#sectionProject .titleProject p{
   font-size: 30px;
 }
-.sectionProject .ShowProject{
+#sectionProject .ShowProject{
   width: 80%;
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);
   justify-content: center;
 }
-.sectionProject .ShowProject .cardProject{
+#sectionProject .ShowProject .cardProject{
   width: 300px;
   min-height: 420px;
   background: rgba(255, 255, 255, 0.1); 
@@ -612,14 +612,14 @@ footer{
   margin: 10px;
   opacity: 0;
 }
-.sectionProject .ShowProject .cardProject .data{
+#sectionProject .ShowProject .cardProject .data{
   width: 100%;
   height: 90%;
   position: relative;
 
   /* background-color: aqua; */
 }
-.sectionProject .ShowProject .cardProject .data .descriptionProject{
+#sectionProject .ShowProject .cardProject .data .descriptionProject{
   width: 100%;
   height: 100px;
   /* padding: 10px; */
@@ -627,7 +627,7 @@ footer{
   /* background-color: aqua; */
   margin-bottom: 10px;
 }
-.sectionProject .ShowProject .cardProject .data .tecnologyUsed{
+#sectionProject .ShowProject .cardProject .data .tecnologyUsed{
   width: 100%;
   min-height: 80px;
   display: grid;
@@ -635,7 +635,7 @@ footer{
   /* gap: 5px; */
   /* margin-top: 10px; */
 }
-.sectionProject .ShowProject .cardProject .data .tecnologyUsed button{
+#sectionProject .ShowProject .cardProject .data .tecnologyUsed button{
   min-width: 70px;
   height: 20px;
   border: none;
