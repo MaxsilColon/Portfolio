@@ -139,7 +139,7 @@ main{
 .section #containerData {
   width: 100%;
   /* min-height: 300px; */
-  padding: 10px;
+  /* padding: 10px; */
   /* padding-left: 20px; */
   display: flex;
   /* border: 1px solid white; */
@@ -166,6 +166,7 @@ animation-delay: 1s;
 
 
 .section #containerData .passion {
+  padding: 10px;
   font-size: 17px;
   height: 100%;
   animation: traslatePassion 1s linear forwards;
@@ -328,15 +329,14 @@ animation: animationProjectCard1 0.5s linear forwards;
     margin: 10px;
     opacity: 0;
 }
-#sectionProject .ShowProject .cardProject:hover{
+/* #sectionProject .ShowProject .cardProject:hover{
   width: 500px;
   height: 500px;
   top: 0;
   left: 0;
   position: fixed;
   z-index: 1;
-  /* transition: 0.5s; */
-}
+} */
 #sectionProject .ShowProject .cardProject .nameProject{
   width: 100%;
   height: 30px;
@@ -453,49 +453,61 @@ footer{
 #educationclas .information .dataInformationstudies .dataInfoc{
   margin-left: 10px;
 }
+
 @media (max-width: 768px) 
 {
+  body{
+    width: 100vw;
+  }
   .header {
     height: auto;
-    width: 100vw;
+    width: 100vw; 
     padding: 10px 0;
-  }
+    box-sizing: border-box;
+}
 
-  .header .nav {
-    width: 100%;
-    flex-direction: flex  ; 
+.header .nav {
+    width: 70%;
+    display: flex;
+    flex-direction: row; 
     justify-content: center;
     align-items: center;
     gap: 20px;
-  }
+}
 
-  .header .nav a {
+.header .nav a {
     font-size: 15px;
     color: rgb(214, 214, 214);
     text-decoration: none;
-  }
+}
+
 
   .header .nav a:hover {
     color: white;
   }
 .section {
-  width: 100%;
+  width: 100vw;
   min-height: 600px;
   /* background-color: aqua; */
 }
 .section #containerData {
   width: 100%;
   /* min-height: 300px; */
-  padding: 10px;
-  padding-left: 20px;
+  padding: 20px;
+  /* padding-left: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* border: 1px solid white; */
 }
+.section #containerData .me p{
+  font-size: 20px;
+}
+.section #containerData .passion{
 
+}
 .section #skills {
-  width: 100%;
+  width: 100vw;
   /* min-height: 100px; */
   min-height: 200px;
   /* border: 1px solid white; */
@@ -503,6 +515,7 @@ footer{
   flex-direction: column;
   /* justify-content: center;
     align-items: center */
+
 }
 .section #skills .titleSkills {
   width: 100%;
@@ -511,6 +524,7 @@ footer{
   justify-content: center;
   align-items: center;
   /* border: 1px solid white; */
+
 }
 .section #skills .titleSkills p {
   font-size: 25px;
@@ -583,22 +597,30 @@ footer{
     width: 30px;
     margin: 5px;
 }
+#sectionProject{
+  width: 100vw;
 
+}
 #sectionProject .titleProject{
-  width: 100%;
+  width: 100vw;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 #sectionProject .titleProject p{
   font-size: 30px;
 }
 #sectionProject .ShowProject{
-  width: 80%;
+
+  width: 100vw;
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);
+  gap: 10px;
   justify-content: center;
+  /* border: 1px solid red; */
+
 }
 #sectionProject .ShowProject .cardProject{
   width: 300px;
@@ -611,6 +633,7 @@ footer{
   padding: 20px;
   margin: 10px;
   opacity: 0;
+  
 }
 #sectionProject .ShowProject .cardProject .data{
   width: 100%;
@@ -643,4 +666,26 @@ footer{
   color: white;
   background-color: rgb(12, 215, 9);
 }
+#educationclas{
+  width: 100vw;
+
+}
+#educationclas .topTitle{
+  width: 100vw;
+
+}
+#educationclas .information{
+  width: 100vw;
+}
+.footer{
+  width: 100vw;
+}
+}
+@media (max-width: 375px) {
+  #sectionProject .ShowProject{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
